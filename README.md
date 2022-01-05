@@ -12,6 +12,12 @@ SVSE5 PCB가 죽었어요! or SVSE5가 옛날꺼라 사볼 코나스테를 못�
 [![Pull Request](https://img.shields.io/github/issues-pr/rhea-so/SVSE5-PCB-Remake)](https://github.com/rhea-so/SVSE5-PCB-Remake/pulls)
 [![Stars](https://img.shields.io/github/stars/rhea-so/SVSE5-PCB-Remake)](https://github.com/rhea-so/SVSE5-PCB-Remake)
 
+## 배선
+
+## Reference
+
+[https://github.com/MHeironimus/ArduinoJoystickLibrary](https://github.com/MHeironimus/ArduinoJoystickLibrary)
+
 ## Usage
 
 ## Configuration & Setup
@@ -25,7 +31,6 @@ cd SVSE5-PCB-Remake
 
 ## Documentation
 
-* [JSDoc](https://rhea-so.github.io/SVSE5-PCB-Remake/docs/index.html)
 * [프로젝트 변경 사항](https://github.com/rhea-so/SVSE5-PCB-Remake/blob/main/CHANGELOG.md)
 * [프로젝트 발전 방향](https://github.com/rhea-so/SVSE5-PCB-Remake/blob/main/ROADMAP.md)
 

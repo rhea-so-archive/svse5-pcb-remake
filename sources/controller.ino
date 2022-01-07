@@ -36,6 +36,8 @@ unsigned long volumeRightTime;
 
 // 버튼 신호 변환 용도 변수들
 int buttonSignalOlds[7] = {0, 0, 0, 0, 0, 0, 0};
+unsigned long buttonSignalDebouncing[7] = {0, 0, 0, 0, 0, 0, 0};
+unsigned long buttonSignalDebouncingPeriod = 20;
 int startButtonEnablePeriod = 30;
 unsigned long startButtonTime;
 
@@ -98,12 +100,12 @@ void enableStartButton(int pin, int joystickButtonId, int signalId)
 }
 
 // BT, FX의 입력을 받습니다.
-// 노이즈가 없어서 디바운싱 처리는 안했습니다.
 void enableButton(int pin, int joystickButtonId, int signalId)
 {
 	int signal = digitalRead(pin);
 	if (signal == 0)
 	{
+		buttonSignalDebouncing[signalId] = millis();
 		if (buttonSignalOlds[signalId] == 1)
 		{
 			Joystick.pressButton(joystickButtonId);
@@ -111,6 +113,11 @@ void enableButton(int pin, int joystickButtonId, int signalId)
 	}
 	else if (signal == 1)
 	{
+		if (millis() - buttonSignalDebouncing[signalId] >= buttonSignalDebouncingPeriod)
+		{
+			return;
+		}
+
 		if (buttonSignalOlds[signalId] == 0)
 		{
 			Joystick.releaseButton(joystickButtonId);

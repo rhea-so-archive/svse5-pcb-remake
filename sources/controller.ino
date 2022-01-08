@@ -37,8 +37,8 @@ unsigned long volumeRightTime;
 // 버튼 신호 변환 용도 변수들
 int buttonSignalOlds[7] = {0, 0, 0, 0, 0, 0, 0};
 unsigned long buttonSignalDebouncing[7] = {0, 0, 0, 0, 0, 0, 0};
-unsigned long buttonSignalDebouncingPeriod = 20;
-int startButtonEnablePeriod = 30;
+unsigned long buttonSignalDebouncingPeriod = 35; // Reference: https://twitter.com/lazy_darkblue/status/1368165852831432709
+int startButtonEnablePeriod = 50;
 unsigned long startButtonTime;
 
 // 기판을 활성화하여 신호를 받을 수 있도록 합니다.

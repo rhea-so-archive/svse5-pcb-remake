@@ -1,8 +1,62 @@
-# SVSE5-PCB-Remake
+# SVSE5 PCB Remodeling
 
-아래 문제를 해결하는 가장 아름다운 방법
+https://www.youtube.com/watch?v=yE9KfZ4eaBQ
 
-SVSE5 PCB가 죽었어요! or SVSE5가 옛날꺼라 사볼 코나스테를 못해요!
+> 후반 부에 갑자기 연결이 끊기는 모습을 보실 수 있습니다.
+
+중고나라에서 PCB 기판이 고장난 SVSE5를 샀습니다.
+
+> 고장난 줄 몰랐는데.. 역시 중고나라..
+
+피같은 돈 15만원이 날라가게 생겨서 굉장히 마음이 아팠습니다.
+
+어떻게든 고쳐서 써보자는 의도로 이 Project를 시작했습니다.
+
+기존 PCB를 Arduino Leonardo로 바꿔 새 생명을 불어넣어 봤습니다.
+
+![](images/original_pcb_1.jpeg)
+
+![](images/original_pcb_2.jpeg)
+
+문제있는 PCB 기판입니다.
+
+옛 버전이라, 마우스 입력 고정이고
+
+게임을 30분 정도 하면 제멋대로 끊겼다 연결되었다.. 아주 난리입니다.
+
+아마 파워 서플라이 쪽 부품이 고장이 아닌가 싶구요.
+
+정교하게 만들어져 있다보니 함부로 건들지 못해서 그냥 PCB를 Arduino로 바꿔야겠다고 생각했습니다.
+
+바꾼 김에, 마우스 입력도 조이스틱 입력으로 변경하구요.
+
+![](./images/remodeling_1.jpeg)
+
+![](./images/remodeling_2.jpeg)
+
+모든 부품을 Arduino에 연결했습니다.
+
+https://www.youtube.com/watch?v=eEEsf6Q9ZHI
+
+바꾸고 난 다음부터는 인식 불량없이 아주 매끄럽게 잘 동작합니다.
+
+기분이 너무 좋네요.
+
+로터리 엔코더를 인식시키는게 조금 난항이었습니다.
+
+https://www.youtube.com/watch?v=z9_P43dfaFo
+
+이런 영상들을 보면서, 기술을 직접 익혔습니다.
+
+노브 인식 완료 후
+
+Millis 함수를 사용한 디바운싱 작업까지 완료했습니다.
+
+기본적인 기능들은 전부 작업 완료했고, 매크로 기능 등 게임 플레이에 도움을 주는 부가적인 기능들을 만들어볼까 구상 중입니다.
+
+![](images/finish.jpeg)
+
+> 작업 완료 후 I lv.18 UC
 
 ## Badges
 
@@ -12,22 +66,9 @@ SVSE5 PCB가 죽었어요! or SVSE5가 옛날꺼라 사볼 코나스테를 못�
 [![Pull Request](https://img.shields.io/github/issues-pr/rhea-so/SVSE5-PCB-Remake)](https://github.com/rhea-so/SVSE5-PCB-Remake/pulls)
 [![Stars](https://img.shields.io/github/stars/rhea-so/SVSE5-PCB-Remake)](https://github.com/rhea-so/SVSE5-PCB-Remake)
 
-## 배선
-
 ## Reference
 
-[https://github.com/MHeironimus/ArduinoJoystickLibrary](https://github.com/MHeironimus/ArduinoJoystickLibrary)
-
-## Usage
-
-## Configuration & Setup
-
-### Project Cloning
-
-```sh
-git clone https://github.com/rhea-so/SVSE5-PCB-Remake
-cd SVSE5-PCB-Remake
-```
+1. [https://github.com/MHeironimus/ArduinoJoystickLibrary](https://github.com/MHeironimus/ArduinoJoystickLibrary)
 
 ## Documentation
 
